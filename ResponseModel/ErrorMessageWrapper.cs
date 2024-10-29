@@ -6,6 +6,9 @@ namespace MediCaresAPI.ResponseModel
     {
         [NotMapped]
         public bool? HasUpdated { get; set; }
+
+        [NotMapped]
+        public int? ErrorCode { get; set; }
         [NotMapped]
         public string? ErrorMessage { get; set; }
     }
