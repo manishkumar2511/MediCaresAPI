@@ -17,6 +17,7 @@ namespace MediCaresAPI.Controllers
         {
             _logger = logger;
             _pharmacyService = pharmacyService;
+
         }
 
         [HttpGet]
