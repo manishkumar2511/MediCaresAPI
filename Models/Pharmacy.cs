@@ -6,14 +6,14 @@ namespace MediCaresAPI.Models
     {
         [Key]
         public int PharmacyId { get; set; }
-        public string PharmacyName { get; set; } = string.Empty;
-        public string PharmacyEmail { get; set; } = string.Empty;
-        public string RegistrationNumber { get; set; } = string.Empty;
-        public string GSTNumber { get; set; } = string.Empty;
-        public string password {  get; set; } =string.Empty;
-       
+        public string? PharmacyName { get; set; } 
+        public string? PharmacyEmail { get; set; }
+        public string? Phone { get; set; }
+        public string? RegistrationNumber { get; set; } 
+        public string? GSTNumber { get; set; } 
+        public string? Password { get; set; } 
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
 
-        public ICollection<PharmacyStaff> StaffMembers { get; set; } = new List<PharmacyStaff>();
+        public ICollection<MediCaresUsers> PharmacyStaff { get; set; } = new List<MediCaresUsers>();
     }
 }

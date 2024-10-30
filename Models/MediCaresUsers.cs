@@ -1,15 +1,13 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MediCaresAPI.Models;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MediCaresAPI.Models
+public class MediCaresUsers : IdentityUser
 {
-    public class MediCaresUsers: IdentityUser
-    {
-        
-        public bool IsPharmacyAdmin { get; set; } = true;
+    public bool IsPharmacyAdmin { get; set; } = false; 
+    public bool IsStaticAdmin { get; set; } = false; 
 
-        [ForeignKey("Pharmacy")]
-        public int? PharmacyId { get; set; }
-        public MediCaresUsers? Pharmacy { get; set; }
-    }
+    [ForeignKey("Pharmacy")]
+    public int? PharmacyId { get; set; }
+    public Pharmacy? Pharmacy { get; set; }
 }
